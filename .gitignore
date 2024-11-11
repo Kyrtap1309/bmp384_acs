@@ -1,0 +1,16 @@
+# STM32CubeIDE specific files
+/.project
+/.cproject
+/.settings/
+*.launch
+
+# Build and output files
+/bin/
+*/Debug/
+*/Release/
+*.bin
+*.elf
+*.hex
+
+# Misc
+*.log
