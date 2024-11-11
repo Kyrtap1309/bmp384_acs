@@ -104,7 +104,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   BMP384_Init();
-  HAL_Delay(100);  // Czekamy na inicjalizację czujnika
+  HAL_Delay(100);
 
 
   /* USER CODE END 2 */
@@ -246,7 +246,7 @@ uint32_t BMP384_ReadTemperatureRaw() {
 }
 
 float BMP384_CalculateAltitude(uint32_t pressure_raw) {
-    const float sea_level_pressure = 101325.0;  // Ciśnienie na poziomie morza w Pa
+    const float sea_level_pressure = 101325.0;
     float pressure = (float)pressure_raw / 256.0;
     return 44330.0 * (1.0 - pow(pressure / sea_level_pressure, 0.1903));
 }
